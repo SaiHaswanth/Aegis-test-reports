@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">36.84% </span>
+                <span class="strong">84.21% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/19</span>
+                <span class='fraction'>16/19</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>2/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">33.33% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/3</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">36.84% </span>
+                <span class="strong">84.21% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/19</span>
+                <span class='fraction'>16/19</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -117,35 +117,35 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">30x</span>
-<span class="cline-any cline-yes">29x</span>
-<span class="cline-any cline-yes">29x</span>
-<span class="cline-any cline-yes">29x</span>
-<span class="cline-any cline-yes">29x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">51x</span>
+<span class="cline-any cline-yes">49x</span>
+<span class="cline-any cline-yes">49x</span>
+<span class="cline-any cline-yes">49x</span>
+<span class="cline-any cline-yes">49x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">29x</span>
+<span class="cline-any cline-yes">49x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -165,27 +165,27 @@ const useSessionApi = () =&gt; {
     const { setIsLoader, messageAlert } = useContext(LoaderAndToasterContext);
     const {  setIsLoggedIn } = useIsLoggedIn();
     const history = useHistory();
-    const Errorstatus = <span class="fstat-no" title="function not covered" >(e</span>rr) =&gt; {
+    const Errorstatus = (err) =&gt; {
       
-<span class="cstat-no" title="statement not covered" >        if ( err.response === undefined </span>
+        <span class="missing-if-branch" title="else path not taken" >E</span>if ( err.response === undefined 
             // err &amp;&amp; err.response &amp;&amp; err.response.status &amp;&amp; err.response.status === 302
         ) {
-<span class="cstat-no" title="statement not covered" >            if (isAuthenticated) {</span>
+            <span class="missing-if-branch" title="if path not taken" >I</span>if (isAuthenticated) {
 <span class="cstat-no" title="statement not covered" >                localStorage.clear();</span>
 <span class="cstat-no" title="statement not covered" >                logout()</span>
 <span class="cstat-no" title="statement not covered" >                history.push('/');</span>
             } else {
-<span class="cstat-no" title="statement not covered" >                axios.post(urls.logout).then(<span class="fstat-no" title="function not covered" >(r</span>es) =&gt; {</span>
+                axios.post(urls.logout).then((res) =&gt; {
 &nbsp;
-<span class="cstat-no" title="statement not covered" >                    localStorage.clear();</span>
-<span class="cstat-no" title="statement not covered" >                    history.push(`/`)</span>
-<span class="cstat-no" title="statement not covered" >                    localStorage.clear();</span>
-<span class="cstat-no" title="statement not covered" >                    setIsLoggedIn(false)</span>
+                    localStorage.clear();
+                    history.push(`/`)
+                    localStorage.clear();
+                    setIsLoggedIn(false)
                     // }
                 })
             }
-<span class="cstat-no" title="statement not covered" >            setIsLoader(false)</span>
-<span class="cstat-no" title="statement not covered" >            messageAlert("Session Expired... Please Login again");</span>
+            setIsLoader(false)
+            messageAlert("Session Expired... Please Login again");
         }
     }
     return { Errorstatus };
@@ -199,7 +199,7 @@ export default useSessionApi;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed Jun 01 2022 13:07:55 GMT+0530 (India Standard Time)
+                at Wed Jun 01 2022 15:10:56 GMT+0530 (India Standard Time)
             </div>
         <script src="../../prettify.js"></script>
         <script>
